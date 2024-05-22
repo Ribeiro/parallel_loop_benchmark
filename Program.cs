@@ -62,11 +62,11 @@ List<string> fruits =
     // Loop over each range element without a delegate invocation.
     for (int i = range.Item1; i < range.Item2; i++)
     {
-        results[i] = results[i] + " partitioned";
+        results[i] = fruits[i] + " partitioned";
         Console.WriteLine("Fruit Name: {0}, Thread Id= {1}", results[i], Thread.CurrentThread.ManagedThreadId);
     }
   }
   );
   Console.WriteLine("Parallel.ForEach() using Partitioner execution time = {0} seconds", stopWatch.Elapsed.TotalSeconds);
-  
+
   Console.Read();
